@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Compilar OpenGL",
+            "command": "g++",
+            "args": [
+                "-g",
+                "src/main.cpp",
+                "src/glad.c",
+                "-o",
+                "bin/main.exe",
+                "-Iinclude",
+                "-Llib",
+                "-lglfw3",
+                "-lopengl32",
+                "-lgdi32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compilacion C++ con GCC para OpenGL 3.3 Core"
+        }
+    ]
+}
